@@ -1,0 +1,1 @@
+Create a Next.js React frontend with the design in @design.md. Use Shad CN components, Tailwind CSS for styling, Framer motion for animations, and unsplash for images.
