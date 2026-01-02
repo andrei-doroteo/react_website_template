@@ -1,0 +1,13 @@
+services:
+    dev-container:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        # volumes:
+        #     - ../:/home/dev/pig-game
+        # ports:
+        #     - "5900:5900" # VNC Server
+        #     - "6080:6080" # noVNC Web Interface
+        # environment:
+        #     - DISPLAY=:0
+

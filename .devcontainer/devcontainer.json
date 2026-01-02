@@ -1,0 +1,101 @@
+// {
+// 	// "image": "mcr.microsoft.com/devcontainers/javascript-node:4-24-trixie"
+// 	// "features": {
+// 	// 	"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+// 	// }
+// 	// "postCreateCommand": "npm install -g @devcontainers/cli",
+// 	// "customizations": {
+// 	// 	"vscode": {
+// 	// 		"extensions": [
+// 	// 			"mads-hartmann.bash-ide-vscode",
+// 	// 			"dbaeumer.vscode-eslint",
+// 	// 			"editorconfig.editorconfig"
+// 	// 		]
+// 	// 	}
+// 	// }
+// }
+
+
+// {
+//     "name": "React Frontend Dev Container",
+//     "dockerComposeFile": "docker-compose.yml",
+//     "service": "dev-container",
+//     "workspaceFolder": "/home/dev",
+//     "remoteUser": "dev",
+//     // "customizations": {
+//     //     "vscode": {
+//     //         "settings": {
+//     //             "terminal.integrated.defaultProfile.linux": "bash",
+//     //             "editor.formatOnSave": true,
+//     //             "editor.defaultFormatter": "esbenp.prettier-vscode",
+//     //             "editor.codeActionsOnSave": {
+//     //                 "source.fixAll.eslint": "explicit"
+//     //             }
+//     //         },
+//     //         // Recommended extensions for React development
+//     //         "extensions": [
+//     //             "dbaeumer.vscode-eslint",
+//     //             "esbenp.prettier-vscode",
+//     //             "bradlc.vscode-tailwindcss",
+//     //             "formulahendry.auto-rename-tag",
+//     //             "dsznajder.es7-react-js-snippets",
+//     //             "christian-kohler.npm-intellisense",
+//     //             "christian-kohler.path-intellisense"
+//     //         ]
+//     //     }
+//     // },
+//     // // Forward ports if needed (common React dev server ports)
+//     // "forwardPorts": [
+//     //     3000,
+//     //     5173,
+//     //     8080
+//     // ],
+//     // Post-create command to install dependencies
+//     // "postCreateCommand": "npm install",
+//     // Keep container running
+//     // "overrideCommand": false
+//     // Features to add (optional - uncomment if needed)
+//     // "features": {
+//     //   "ghcr.io/devcontainers/features/node:1": {
+//     //     "version": "lts"
+//     //   }
+//     // }
+// }
+
+{
+    "name": "Pig Game",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev-container",
+    "workspaceFolder": "/home/dev",
+    // "customizations": {
+    //     "vscode": {
+    //         "settings": {
+    //             "python.defaultInterpreterPath": "/usr/local/bin/python",
+    //             "python.linting.enabled": true,
+    //             "python.linting.pylintEnabled": true,
+    //             "python.formatting.provider": "black"
+    //         },
+    //         "extensions": [
+    //             "ms-python.python",
+    //             "ms-python.vscode-pylance",
+    //             "streetsidesoftware.code-spell-checker"
+    //         ]
+    //     }
+    // },
+    "forwardPorts": [
+        5900,
+        6080
+    ],
+    "portsAttributes": {
+        "5900": {
+            "label": "VNC Server",
+            "onAutoForward": "silent"
+        },
+        "6080": {
+            "label": "noVNC (Browser Access)",
+            "onAutoForward": "notify"
+        }
+    },
+    // "postStartCommand": "echo '\n🎮 Virtual Desktop Ready!\n\nAccess the desktop at: http://localhost:6080/vnc.html\nTo run the frog game: python src/main.py\nControls: e=forward, d=backward, s=left, f=right\n'",
+    "remoteUser": "dev"
+}
