@@ -7,7 +7,7 @@ class WpApi {
   private constructor() {
     this.apiClient = axios.create({
       baseURL: process.env.WP_BASE_URL,
-      timeout: 1000,
+      timeout: 1000 * 15,
       headers: { "X-Custom-Header": "foobar" },
     });
   }
